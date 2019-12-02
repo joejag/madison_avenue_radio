@@ -2,13 +2,14 @@
 
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xml:lang="{{ site.lang }}">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xml:lang="en">
 	<channel>
-		<atom:link href="{{ site.url }}/podcast.rss" rel="self" type="application/rss+xml" />
 		<title>Madison Avenue Radio</title>
-		<description>{{ site.description | xml_escape }}</description>
 		<link>{{ site.url }}</link>
+		<description>{{ site.description | xml_escape }}</description>
+		<atom:link href="{{ site.url }}/podcast.rss" rel="self" type="application/rss+xml" />
 		<language>en</language>
+        <category>Family</category>
 		<copyright>Copyright {{ site.title }}</copyright>
 		<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
 		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
@@ -17,6 +18,7 @@
 			<url>{{ site.url }}/assets/madison.jpg</url>
 			<title>{{ site.title }}</title>
 		</image>
+
 		<itunes:subtitle>{{ site.description | xml_escape }}</itunes:subtitle>
 		<itunes:author>{{ site.author }}</itunes:author>
 		<itunes:summary>{{ site.description | xml_escape }}</itunes:summary>
@@ -28,6 +30,14 @@
 		<itunes:image href="{{ site.url }}/imaassetsges/madison.jpg" />
 		<itunes:category text="Family" />
 		<itunes:explicit>no</itunes:explicit>
+
+		<googleplay:author>{{ site.author }}</googleplay:author>
+		<googleplay:description>{{ site.description | xml_escape }}</googleplay:description>
+		<googleplay:category text="Family" />
+		<googleplay:explicit>No</googleplay:explicit>
+		<googleplay:email>{{ site.email }}</googleplay:email>
+        <googleplay:image href="{{ site.url }}/assets/madison.jpg" />
+
 		{% for post in site.posts %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
