@@ -1,1 +1,2 @@
-mp3info -p %S assets/episodes/001-bread-bread-bread.mp3
+ls -l $1
+mp3info -p %S $1 
