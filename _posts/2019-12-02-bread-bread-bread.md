@@ -7,3 +7,7 @@ length: 4713661
 duration: 196
 ---
 
+<audio controls>
+  <source src="{{ page.file }}" type="audio/mpeg">
+</audio>
+
