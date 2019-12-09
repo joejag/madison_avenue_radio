@@ -2,7 +2,7 @@
 layout: post
 title:  "Favourites"
 summary: "What's your favourite food?"
-file: "/assets/episodes/004-fvourites.mp3"
+file: "/assets/episodes/004-favourites.mp3"
 length: 4713661
 duration: 196
 ---
